@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FavoriteMovies</string>
+    <string name="tv_main_logo_text">Favorite Movies</string>
+    <string name="btn_search_text">Search</string>
+    <string name="it_search_searchMovie_hint">movie title</string>
+    <string name="movietitle_adapter_placeholder">movie title</string>
+    <string name="empty_searchbar">You have to type in a title</string>
+</resources>

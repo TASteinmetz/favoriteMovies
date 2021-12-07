@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/movie_adapter_cardview_margin"
+    android:elevation="@dimen/movie_adapter_cardview_elevation"
+    app:cardCornerRadius="@dimen/movie_adapter_cardview_cornerradius">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            android:textSize="@dimen/movie_adapter_title_textsize"
+            tools:text="@string/movietitle_adapter_placeholder"
+            android:background="@color/white"
+            android:paddingStart="@dimen/movie_adapter_tv_padding_start"/>
+
+        <TextView
+            android:id="@+id/movie_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/movietitle_adapter_placeholder"
+            android:background="@color/white"
+            android:paddingStart="@dimen/movie_adapter_tv_padding_start"/>
+
+        <TextView
+            android:id="@+id/movie_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/movietitle_adapter_placeholder"
+            android:background="@color/white"
+            android:paddingStart="@dimen/movie_adapter_tv_padding_start"/>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

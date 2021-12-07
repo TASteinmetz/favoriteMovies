@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="iv_main_logo_size">150dp</dimen>
+    <dimen name="iv_main_logo_marginTop">50dp</dimen>
+    <dimen name="btn_search_marginTop">100dp</dimen>
+    <dimen name="ib_search_size">60dp</dimen>
+    <dimen name="ll_search_searchbar_margin">5dp</dimen>
+    <dimen name="movie_adapter_tv_padding_start">8dp</dimen>
+    <dimen name="movie_adapter_cardview_margin">8dp</dimen>
+    <dimen name="movie_adapter_cardview_elevation">8dp</dimen>
+    <dimen name="movie_adapter_cardview_cornerradius">8dp</dimen>
+    <dimen name="movie_adapter_title_textsize">20sp</dimen>
+</resources>
