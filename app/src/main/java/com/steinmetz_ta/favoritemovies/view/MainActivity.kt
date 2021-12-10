@@ -1,3 +1,9 @@
+/**
+ * In this Activtiy is the main menu. Here you can choose to search for
+ * movies you want to add to your favorites or you can open your favorite list
+ *
+ * @author: tobi.steinmetz@gmail.com
+ * */
 package com.steinmetz_ta.favoritemovies.view
 
 import android.content.Intent

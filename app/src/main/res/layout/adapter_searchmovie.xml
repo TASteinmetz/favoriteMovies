@@ -37,16 +37,25 @@
             android:background="@color/white"
             android:paddingStart="@dimen/movie_adapter_tv_padding_start"/>
 
-        <TextView
-            android:id="@+id/movie_description"
+        <ImageView
+            android:id="@+id/movie_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
+            android:scaleType="fitCenter"
             android:gravity="center_vertical"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="@string/movietitle_adapter_placeholder"
+            android:layout_margin="5dp"
             android:background="@color/white"
             android:paddingStart="@dimen/movie_adapter_tv_padding_start"/>
+
+        <Button
+            android:id="@+id/btn_add_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_add_movie_text"
+            android:layout_margin="5dp"/>
 
     </LinearLayout>
 

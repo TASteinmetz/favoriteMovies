@@ -1,6 +1,12 @@
+/**
+ * In this Activtiy you can enter a movie title into the EditText and by pressing
+ * the SearchButton you will receive movies with a similiar name from imdb-api.com.
+ * with the AddButton in the CardViews you can add a specific movie to your favorites
+ *
+ * @author: tobi.steinmetz@gmail.com
+ * */
 package com.steinmetz_ta.favoritemovies.view
 
-import android.graphics.Movie
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -16,21 +22,15 @@ import com.steinmetz_ta.favoritemovies.model.MovieResponse
 import com.steinmetz_ta.favoritemovies.repo.SearchRepository
 import com.steinmetz_ta.favoritemovies.viewmodel.SearchViewModel
 import com.steinmetz_ta.favoritemovies.viewmodel.SearchViewModelFactory
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+
 
 class SearchMovieActivity : AppCompatActivity() {
 
     private lateinit var bindings: ActivitySearchMovieBinding
-    private lateinit var viewModel: SearchViewModel
-
-    //private lateinit var searchRepository: SearchRepository
+    private lateinit var searchViewModel: SearchViewModel
 
     private var movieApi = MovieApi.getInstance()
-    private val adapter = SearchAdapter()
+    private lateinit var adapter: SearchAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +38,17 @@ class SearchMovieActivity : AppCompatActivity() {
         setContentView(bindings.root)
 
 
-        //Init RecyclerView
+        init()
+
+    }
+
+    private fun init(){
+
+        /**
+         * Init RecyclerView
+         * */
+        adapter = SearchAdapter(this)
+
         bindings.rvMovieSearch.layoutManager = LinearLayoutManager(
             this,
             LinearLayoutManager.VERTICAL,
@@ -47,34 +57,33 @@ class SearchMovieActivity : AppCompatActivity() {
         bindings.rvMovieSearch.adapter = adapter
         bindings.rvMovieSearch.visibility = View.VISIBLE
 
-        //Init LiveData
 
-        //old: ViewModel gets deleted
-        //searchRepository = SearchRepository(movieApi)
-        //viewModel = SearchViewModel(searchRepository)
+        /**
+         * Observe LiveData
+         * */
+        searchViewModel = ViewModelProvider(this, SearchViewModelFactory(SearchRepository(movieApi))).get(SearchViewModel::class.java)
 
-        //new: ViewModelProvider retains them
-        viewModel = ViewModelProvider(this, SearchViewModelFactory(SearchRepository(movieApi))).get(SearchViewModel::class.java)
-
-        viewModel.movieList.observe(this, Observer { movieResponse: MovieResponse ->
+        searchViewModel.movieList.observe(this, Observer { movieResponse: MovieResponse ->
             Log.d("Movies", "onCreate: $movieResponse")
             adapter.setMovieList(movieResponse.results)
         })
 
-        viewModel.errorMsg.observe(this, Observer { errorMsg: String ->
+        searchViewModel.errorMsg.observe(this, Observer { errorMsg: String ->
             Log.d("Movies", "Error: $errorMsg")
         })
 
 
+        /**
+         * Set onClick for SearchButton
+         * */
         bindings.ibSearchMovie.setOnClickListener {
 
             if(bindings.etSearchMovieTitle.text.toString().isNotEmpty()) {
-                viewModel.getMovies(bindings.etSearchMovieTitle.text.toString()) //
+                searchViewModel.getMovies(bindings.etSearchMovieTitle.text.toString()) //
             } else {
                 Toast.makeText(this, "title is missing", Toast.LENGTH_LONG).show()
             }
 
         }
-
     }
 }

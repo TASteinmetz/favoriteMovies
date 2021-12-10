@@ -5,4 +5,6 @@
     <string name="it_search_searchMovie_hint">movie title</string>
     <string name="movietitle_adapter_placeholder">movie title</string>
     <string name="empty_searchbar">You have to type in a title</string>
+    <string name="btn_add_movie_text">Add</string>
+    <string name="tv_favorites_heading">Your favorite movies:</string>
 </resources>

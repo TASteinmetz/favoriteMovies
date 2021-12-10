@@ -10,8 +10,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.FavoriteMovies">
+        android:theme="@style/Theme.FavoriteMovies"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".view.FavoriteMovieActivity"
+            android:exported="false" />
         <activity
             android:name=".view.SearchMovieActivity"
             android:exported="false" />
