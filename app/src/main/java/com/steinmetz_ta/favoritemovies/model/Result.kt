@@ -3,6 +3,7 @@ package com.steinmetz_ta.favoritemovies.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 
 @Entity(tableName = "movie_table")
@@ -19,4 +20,4 @@ data class Result(
     val resultType: String,
     @ColumnInfo(name = "title")
     val title: String
-)
+): Serializable

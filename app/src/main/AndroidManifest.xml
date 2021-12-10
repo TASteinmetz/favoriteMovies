@@ -13,6 +13,9 @@
         android:theme="@style/Theme.FavoriteMovies"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".view.MovieDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.FavoriteMovieActivity"
             android:exported="false" />
         <activity
