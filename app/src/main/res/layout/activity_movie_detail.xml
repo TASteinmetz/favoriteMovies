@@ -51,6 +51,7 @@
             android:layout_gravity="center">
 
             <ImageButton
+                android:id="@+id/ib_movieDetail_addMovieToFav"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/ic_baseline_star_border_24"

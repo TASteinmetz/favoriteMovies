@@ -12,6 +12,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,6 +21,8 @@ import com.steinmetz_ta.favoritemovies.data.MovieApi
 import com.steinmetz_ta.favoritemovies.databinding.ActivitySearchMovieBinding
 import com.steinmetz_ta.favoritemovies.model.MovieResponse
 import com.steinmetz_ta.favoritemovies.repo.SearchRepository
+import com.steinmetz_ta.favoritemovies.viewmodel.MovieViewModel
+import com.steinmetz_ta.favoritemovies.viewmodel.MovieViewModelFactory
 import com.steinmetz_ta.favoritemovies.viewmodel.SearchViewModel
 import com.steinmetz_ta.favoritemovies.viewmodel.SearchViewModelFactory
 
