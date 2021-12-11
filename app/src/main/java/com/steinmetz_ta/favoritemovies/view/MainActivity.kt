@@ -29,6 +29,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        bindings.btnMainFavorites.setOnClickListener {
+            intent = Intent(this, FavoriteMovieActivity::class.java)
+            startActivity(intent)
+        }
+
         //https://imdb-api.com/en/API/SearchTitle/k_wqjoq51m/inception
     }
 }
