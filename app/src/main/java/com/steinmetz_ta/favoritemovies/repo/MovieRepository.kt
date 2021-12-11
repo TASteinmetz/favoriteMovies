@@ -20,4 +20,9 @@ class MovieRepository(private val movieDao: MovieDao) {
     suspend fun delete(id: String){
         movieDao.deleteById(id)
     }
+
+    @Suppress("RedundantSuspendModifier")
+    @WorkerThread
+    suspend fun search(id: String) = movieDao.findById(id)
+
 }

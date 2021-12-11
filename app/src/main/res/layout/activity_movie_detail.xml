@@ -57,7 +57,19 @@
                 android:src="@drawable/ic_baseline_star_border_24"
                 android:scaleType="fitXY"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/white"/>
+                android:backgroundTint="@color/white"
+                android:visibility="visible"/>
+
+            <ImageButton
+                android:id="@+id/ib_movieDetail_deleteMovieFromFav"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_baseline_star_24"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:visibility="gone"
+                tools:visibility="visible"/>
         </LinearLayout>
 
     </LinearLayout>
