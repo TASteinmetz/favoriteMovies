@@ -2,6 +2,8 @@
 
 This is a Kotlin Android App for searching movies and series from the imdb Database and saving them to your favorites. Used technologies in this project are Room, Retrofit, Gson and MVVM.
 
+![Screenshot](favoriteMovies/screenshots/mainmenue.png)
+
 ## Planned features:
 
 - adding different lists like: watched or want to watch
