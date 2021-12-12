@@ -18,6 +18,6 @@ This is a Kotlin Android App for searching movies and series from the imdb Datab
 
 ![Screenshot](./screenshots/mainmenue.png)
 
-![Screenshot](./screenshots/searchview.png)
+![Screenshot](./screenshots/serachview.png)
 
 ![Screenshot](./screenshots/detailview.png)
