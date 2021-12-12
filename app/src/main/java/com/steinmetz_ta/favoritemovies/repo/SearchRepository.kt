@@ -5,5 +5,5 @@ import com.steinmetz_ta.favoritemovies.data.MovieApi
 
 class SearchRepository constructor(private val movieApi: MovieApi) {
 
-    fun getMovies(title: String) = movieApi.getMovies(title) //title: String  title
+    fun getMovies(title: String) = movieApi.getMovies(title)
 }

@@ -13,7 +13,11 @@ import kotlinx.coroutines.runBlocking
 class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
 
     val allMovies: LiveData<List<Result>>  = repository.allMovies.asLiveData()
+    val movie = MutableStateFlow<Result?>(null)
 
+    /**
+     * Launching new coroutines to insert/delete/search movies in a non-blocking way
+     */
 
     fun insertMovie(movie: Result) = viewModelScope.launch {
         repository.insert(movie)
@@ -22,8 +26,6 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
     fun deleteMovie(id: String) = viewModelScope.launch {
         repository.delete(id)
     }
-
-    val movie = MutableStateFlow<Result?>(null)
 
     fun searchMovie(id: String) {
         viewModelScope.launch {

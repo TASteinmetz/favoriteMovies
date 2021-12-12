@@ -2,6 +2,8 @@
  * In this Activtiy is the main menu. Here you can choose to search for
  * movies you want to add to your favorites or you can open your favorite list
  *
+ * example api call: https://imdb-api.com/en/API/SearchTitle/k_wqjoq51m/inception
+ *
  * @author: tobi.steinmetz@gmail.com
  * */
 package com.steinmetz_ta.favoritemovies.view
@@ -34,6 +36,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //https://imdb-api.com/en/API/SearchTitle/k_wqjoq51m/inception
     }
 }

@@ -36,12 +36,22 @@ class MovieDetailActivity : AppCompatActivity() {
 
         var movie: Result = intent.getSerializableExtra(Constants.MOVIE_KEY) as Result
 
-
+        /**
+         * Starts search for the selected movie in the database
+         * */
         movieViewModel.searchMovie(movie.id)
 
+        /**
+         * Collects the result of the movie search from above.
+         * */
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 movieViewModel.movie.collect {
+                    /**
+                     * if there is already an db entry with that movie the option to
+                     * delte it from the db is shown. If it's not, then by default is
+                     * the add to favorite button shown
+                     * */
                     if(it != null) {
                         bindings.ibMovieDetailAddMovieToFav.visibility = View.GONE
                         bindings.ibMovieDetailDeleteMovieFromFav.visibility = View.VISIBLE
@@ -50,12 +60,16 @@ class MovieDetailActivity : AppCompatActivity() {
             }
         }
 
-
+        /**
+         * Initializing the UI with the movie data
+         * */
         bindings.tvMovieDetailMovieTitle.text = movie.title
         bindings.tvMovieDetailMovieDesc.text = movie.description
         Glide.with(this).asBitmap().load(movie.image).into(bindings.ivMovieDetailMovieLogo)
 
-
+        /**
+         * onClickListener for adding and removing a movie from the favorites
+         * */
         bindings.ibMovieDetailAddMovieToFav.setOnClickListener {
             movieViewModel.insertMovie(movie)
             Log.d("FavoriteMovies", "${movieViewModel.allMovies}")
