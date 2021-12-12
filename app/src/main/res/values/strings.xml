@@ -8,4 +8,5 @@
     <string name="btn_add_movie_text">Add</string>
     <string name="tv_favorites_heading">Your favorite movies:</string>
     <string name="btn_favorites_text">Favorites</string>
+    <string name="btn_show_details_movie_text">Show details</string>
 </resources>

@@ -43,7 +43,7 @@ class SearchAdapter(context: Context): RecyclerView.Adapter<SearchAdapter.Search
 
         holder.binding.movieId.text = movie.description
 
-        holder.binding.btnAddMovie.setOnClickListener {
+        holder.binding.btnShowDetailsMovie.setOnClickListener {
             var intent = Intent(context, MovieDetailActivity::class.java)
             intent.putExtra(Constants.MOVIE_KEY, movie)
             context.startActivity(intent)

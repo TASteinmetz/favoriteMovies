@@ -51,10 +51,10 @@
             android:paddingStart="@dimen/movie_adapter_tv_padding_start"/>
 
         <Button
-            android:id="@+id/btn_add_movie"
+            android:id="@+id/btn_show_details_movie"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn_add_movie_text"
+            android:text="@string/btn_show_details_movie_text"
             android:layout_margin="5dp"/>
 
     </LinearLayout>
