@@ -16,4 +16,6 @@
     <dimen name="ll_movieDetail_padding">5dp</dimen>
     <dimen name="tv_movieDetail_movieTitle_txtSize">34sp</dimen>
     <dimen name="tv_movieDetail_movieDesc_txtSize">22sp</dimen>
+    <dimen name="btn_favorites_marginTop">10dp</dimen>
+    <dimen name="btn_mainmenue_width">150dp</dimen>
 </resources>

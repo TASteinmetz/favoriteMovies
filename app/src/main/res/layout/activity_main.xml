@@ -29,16 +29,16 @@
 
     <Button
         android:id="@+id/btn_main_search"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/btn_mainmenue_width"
         android:layout_height="wrap_content"
         android:text="@string/btn_search_text"
         android:layout_marginTop="@dimen/btn_search_marginTop"/>
 
     <Button
         android:id="@+id/btn_main_favorites"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/btn_mainmenue_width"
         android:layout_height="wrap_content"
         android:text="@string/btn_favorites_text"
-        android:layout_marginTop="@dimen/btn_search_marginTop"/>
+        android:layout_marginTop="@dimen/btn_favorites_marginTop"/>
 
 </LinearLayout>
